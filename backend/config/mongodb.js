@@ -11,14 +11,12 @@ const connectDB = async () => {
     });
 
     await mongoose.connect(process.env.MONGODB_URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
       ssl: true,
       tlsAllowInvalidCertificates: false,
     });
   } catch (error) {
     console.error("❌ Initial MongoDB connection failed:", error);
-    process.exit(1); // Exit if initial connection fails
+    process.exit(1);
   }
 };
 
