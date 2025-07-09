@@ -15,7 +15,10 @@ connectCloudinary()
 
 // middlewares
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+  origin: 'https://doctorappointmentapp-1-o29u.onrender.com'
+}))
+
 
 // api endpoints
 app.use("/api/user", userRouter)
