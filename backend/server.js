@@ -16,7 +16,11 @@ connectCloudinary()
 // middlewares
 app.use(express.json())
 app.use(cors({
-  origin: 'https://doctorappointmentapp-1-o29u.onrender.com'
+  origin: [
+    'https://doctorappointmentapp-13.onrender.com',
+    'https://doctorappointmentapp-1-o29u.onrender.com'
+  ],
+  credentials: true
 }))
 
 
